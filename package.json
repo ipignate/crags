@@ -1,0 +1,34 @@
+{
+  "name": "cragfinder",
+  "version": "0.0.9",
+  "description": "Portuguese Crag Demo",
+  "main": "index.js",
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.3.x"
+  },
+  "author": "Ines Pignatelli",
+  "license": "MIT",
+  "dependencies": {
+    "angular-tag": "^3.0.0",
+    "body-parser": "~1.2.0",
+    "cookie-parser": "^1.1.0",
+    "express": "~4.2.0",
+    "express-session": "^1.2.1",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^1.2.2",
+    "jade": "~1.3.1",
+    "jshint": "^2.9.4",
+    "mongoose": "^4",
+    "morgan": "~1.0.1",
+    "ng-tags-input": "^3.1.1",
+    "passport": "^0.2.0",
+    "passport-local": "^1.0.0",
+    "stylus": "~0.45.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jade": "^1.1.0",
+    "gulp-watch": "^4.3.11"
+  }
+}

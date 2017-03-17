@@ -1,0 +1,26 @@
+
+<div class="col-md-6">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2 class="panel-title text-center">Featured Crags</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-default">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Region</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody ng-repeat="crag in $parent.crags">
+          <tr>
+            <td>{{crag.name}}<br/><span ng-repeat="ct in $parent.crag.tags" class="badge">{{ct.tag}}</span></td>
+            <td>{{crag.region}}</td>
+            <td>{{crag.grade}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+.container
+  .row
+    table.table.table-striped.table-hover
+      thead
+        tr
+          th First Name
+          th Last Name
+        tr(ng-repeat="user in users")
+          td {{user.firstName}}
+          td {{user.lastName}}

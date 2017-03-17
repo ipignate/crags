@@ -1,0 +1,19 @@
+.container
+  .row
+    h2 Manage Crags
+    h6: a(href='/add') Add Crag
+    table.table.table-striped.table-hover
+      thead
+        tr
+          th Name
+          th Region
+          th Grade
+          th Action
+      tbody(ng-repeat='crag in craglist')
+         tr
+          td {{crag.name}}
+          td {{crag.region}}
+          td {{crag.grade}}
+          td
+            .btn.btn-primary(ng-click='updateCrag(crag)') Edit
+            .btn.btn-primary.btn-danger(ng-click='deleteCrag(crag)') Delete

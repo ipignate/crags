@@ -1,0 +1,32 @@
+.container
+  .well
+    form.form-horizontal(name="addCragForm")
+      fieldset
+        legend Add a New Crag
+        .form-group
+          label.col-md-2.control-label(for="name") Name
+          .col-md-10
+            input.form-control(name="name", type="text", placeholder="Crag Name", ng-model="newCrag.name", required)
+        .form-group
+          label.col-md-2.control-label(for="region") Region
+          .col-md-10
+            input.form-control(name="region", type="text", placeholder="Region", ng-model="newCrag.region", required)
+        .form-group
+          label.col-md-2.control-label(for="location") Location (Lat,Lon)
+          .col-md-10
+            input.form-control(name="location", type="text", placeholder="[Lat,Lon]", ng-model="newCrag.location", required)
+        .form-group
+          label.col-md-2.control-label(for="grade") Grade
+          .col-md-10
+            input.form-control(name="grade", type="text", placeholder="4+,5+,6+,...", ng-model="newCrag.grade", required)
+        .form-group
+          label.col-md-2.control-label(for="tags") Nearby Facilities
+          .col-md-10
+            input.form-control(name="tags", type="text", placeholder="Input tags", ng-model="newCrag.tags")
+            span.badge(ng-repeat='t in newCrag.tags') {{t}}
+        .form-group
+          .col-md-10.col-md-offset-2
+            .pull-right
+              button.btn.btn-primary(ng-click="addCrag()") Submit
+              | &nbsp;
+              a.btn.btn-default(href="/") Cancel
