@@ -8,13 +8,13 @@
             form(name='queryForm')
                 .form-group
                     label(for='name') Crag Name
-                    input#name.form-control(type='text', placeholder='Crag Name..', ng-model='$parent.formData.name')
+                    input#name.form-control(type='text', placeholder='Crag Name..', ng-model='$parent.name')
                 .form-group
                     label(for='region') Crag Region
-                    input#location.form-control(type='text', placeholder='Crag Region..', ng-model='$parent.formData.region')
+                    input#location.form-control(type='text', placeholder='Crag Region..', ng-model='$parent.region')
                 .form-group
                     label(for='grade') Grade (4+,5+,6+,..)
-                    input#grade.form-control(type='text', placeholder='Crag Grade', ng-model='$parent.formData.grade')
+                    input#grade.form-control(type='text', placeholder='Crag Grade', ng-model='$parent.grade')
                 button.btn.btn-danger.btn-block(type='submit', ng-click='$parent.queryCrags()') Search
-        .panel-footer(ng-show='queryCount>0')
+        .panel-footer(ng-show='$parent.queryCount>0')
             p.text-center Awesome! We Found {{queryCount}} Crags.

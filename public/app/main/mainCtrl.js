@@ -1,11 +1,11 @@
 (function(){
     var mainCtrl = function($scope, $http, Geo){
       //Variable definition
-      $scope.formData = {};
-      $scope.queryCount = 0;
-      $scope.mks = {};
-      var queryBody = {}
-          queryResults = {};
+      var formData = {},
+          mks = {},
+          queryBody = {},
+          queryResults = {},
+          queryCount = 0;
       
       // Define map object
       $scope.map = {
@@ -33,17 +33,13 @@
       $scope.queryCrags = function() {
       // Assemble queryBody
         queryBody = {
-           name: $scope.formData.name,
-           region: $scope.formData.region,
-           grade: $scope.formData.grade
+           name: $scope.name,
+           region: $scope.region,
+           grade: $scope.grade
         };
-        $scope.queryCount = 0;
-        $scope.crags = {};
-        $scope.mks = {};
         
         $http.post('/api/crags/query', queryBody)
-             .success(function(queryResults){
-                console.log('QueryResults:' + queryResults);
+             .success(function(queryResults) {
                 $scope.queryCount = queryResults.length;
                 $scope.crags = queryResults;
                 $scope.mks = Geo.convertToMarkers(queryResults);

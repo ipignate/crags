@@ -7,6 +7,11 @@ var express = require('express'),
 
 module.exports = function(app, config) {
 
+  app.use(function(req, res, next) {
+    console.log(req.method, req.url);
+    next();
+  });
+
   app.set('views', config.rootPath + '/server/views');
   app.set('view engine', 'jade');
   app.use(logger('dev'));

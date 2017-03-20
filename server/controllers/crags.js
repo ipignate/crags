@@ -1,5 +1,4 @@
 var Crag = require('mongoose').model('Crag');
-var log = require('morgan');
 
 exports.getCrags = function(req, res) {
   Crag.find(function(err,crags){
@@ -26,17 +25,23 @@ exports.deleteCrag = function(req, res) {
 }
 
 exports.createCrag = function(req, res) {
-  //Serialise the req.body.tags into an array to update tagSchema
-  var tg = req.body.tags.split(',');
-  console.log('req.body:'+req.body.tags);
-  console.log('tg:'+tg);
-  var tagLength = tg.length;
+  //Get the length of tags object
+  var tagLength=0;
   var newTags = [];
+  var tg = [];
 
+  for (var i in req.body.tags) {
+    if (req.body.tags.hasOwnProperty(i)) {
+        tagLength++;
+    }
+  } 
+  //create an array of tags to save
   for(var i=0;i<tagLength;i++){
+         tg[i] = req.body.tags[i];
+         console.log('tg:'+tg);
          newTags.push({tag: tg[i]});
   }
-  
+  //populate Crag Schema to save to db
   var newCrag = {
     name: req.body.name,
     region: req.body.region,

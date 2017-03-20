@@ -11,7 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "angular-tag": "^3.0.0",
-    "body-parser": "~1.2.0",
+    "body-parser": "^1.17.1",
     "cookie-parser": "^1.1.0",
     "express": "~4.2.0",
     "express-session": "^1.2.1",
