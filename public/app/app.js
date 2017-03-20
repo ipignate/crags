@@ -3,7 +3,8 @@
   var app = angular.module('cragfinder',[
                            'ngResource', 
                            'ngRoute',
-                           'uiGmapgoogle-maps'
+                           'uiGmapgoogle-maps',
+                           'ngTagsInput'
   ]);
       
   app.config(['$routeProvider', 

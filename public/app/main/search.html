@@ -8,20 +8,20 @@
       <form name="queryForm">
         <div class="form-group">
           <label for="name">Crag Name</label>
-          <input id="name" type="text" placeholder="Crag Name.." ng-model="$parent.formData.name" class="form-control"/>
+          <input id="name" type="text" placeholder="Crag Name.." ng-model="$parent.name" class="form-control"/>
         </div>
         <div class="form-group">
           <label for="region">Crag Region</label>
-          <input id="location" type="text" placeholder="Crag Region.." ng-model="$parent.formData.region" class="form-control"/>
+          <input id="location" type="text" placeholder="Crag Region.." ng-model="$parent.region" class="form-control"/>
         </div>
         <div class="form-group">
           <label for="grade">Grade (4+,5+,6+,..)</label>
-          <input id="grade" type="text" placeholder="Crag Grade" ng-model="$parent.formData.grade" class="form-control"/>
+          <input id="grade" type="text" placeholder="Crag Grade" ng-model="$parent.grade" class="form-control"/>
         </div>
         <button type="submit" ng-click="$parent.queryCrags()" class="btn btn-danger btn-block">Search</button>
       </form>
     </div>
-    <div ng-show="queryCount&gt;0" class="panel-footer">
+    <div ng-show="$parent.queryCount&gt;0" class="panel-footer">
       <p class="text-center">Awesome! We Found {{queryCount}} Crags.</p>
     </div>
   </div>

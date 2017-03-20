@@ -6,7 +6,7 @@
         $scope.newCrag.tags = ["Family","Dog","Shop","Restaurant","Hospital"];
 
         $scope.addCrag=function() {
-            //console.log('newCrag.tags:' + JSON.stringify($scope.newCrag));
+            console.log('newCrag.tags:' + JSON.stringify($scope.newCrag));
             $scope.newCrag
                 .$save()
                 .then(function(){

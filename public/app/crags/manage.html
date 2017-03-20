@@ -1,1 +1,28 @@
-<div class="container"><div class="row"><h2>Manage Crags</h2><h6><a href="/add">Add Crag</a></h6><table class="table table-striped table-hover"><thead><tr><th>Name</th><th>Region</th><th>Grade</th><th>Action</th></tr></thead><tbody ng-repeat="crag in craglist"><tr><td>{{crag.name}}</td><td>{{crag.region}}</td><td>{{crag.grade}}</td><td><div ng-click="updateCrag(crag._id)" class="btn btn-primary">Edit</div><div ng-click="deleteCrag(crag._id)" class="btn btn-primary btn-danger">Delete</div></td></tr></tbody></table></div></div>
+
+<div class="container">
+  <div class="row">
+    <h2>Manage Crags</h2>
+    <h6><a href="/add">Add Crag</a></h6>
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Region</th>
+          <th>Grade</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody ng-repeat="crag in craglist">
+        <tr>
+          <td>{{crag.name}}</td>
+          <td>{{crag.region}}</td>
+          <td>{{crag.grade}}</td>
+          <td>
+            <div ng-click="updateCrag(crag)" class="btn btn-primary">Edit</div>
+            <div ng-click="deleteCrag(crag)" class="btn btn-primary btn-danger">Delete</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

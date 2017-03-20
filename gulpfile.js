@@ -20,6 +20,12 @@ gulp.task('main', function(){
     .pipe(jade({pretty:true}))
     .pipe(gulp.dest('public/app/main/'))
 });
+gulp.task('crags', function(){
+  return gulp.src('public/app/crags/*.jade')
+    .pipe(watch('public/app/crags/*.jade'))
+    .pipe(jade({pretty:true}))
+    .pipe(gulp.dest('public/app/crags/'))
+});
 gulp.task('views', function(){
   return gulp.src('server/views/*.jade')
     .pipe(watch('server/views/*.jade'))
@@ -32,6 +38,5 @@ gulp.task('includes', function(){
     .pipe(jade({pretty:true}))
     .pipe(gulp.dest('server/includes/'))
 });
-          
-gulp.task('default', [ 'account', 'admin', 'main','views', 'includes' ]);
+gulp.task('default', ['account','admin','main','crags','views','includes']);
           

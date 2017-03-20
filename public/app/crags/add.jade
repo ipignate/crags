@@ -22,8 +22,8 @@
         .form-group
           label.col-md-2.control-label(for="tags") Nearby Facilities
           .col-md-10
-            input.form-control(name="tags", type="text", placeholder="Input tags", ng-model="newCrag.tags")
-        .form-group
+            form
+              tags-input(name="tags" ng-model="newCrag.tags" add-on-blur="false" min-tags="1" max-tags="5" allow-leftover-text="false")
           .col-md-10.col-md-offset-2
             .pull-right
               button.btn.btn-primary(ng-click="addCrag()") Submit

@@ -12,7 +12,7 @@
             "taskName": "jade files",
             "command": "gulp",
             "isBuildCommand": true,
-            "args": ["account", "admin", "main", "views", "includes"],
+            "args": ["account", "admin", "main", "crags", "views", "includes"],
             "isShellCommand": true
         }
     ]
