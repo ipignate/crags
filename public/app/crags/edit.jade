@@ -22,7 +22,8 @@
         .form-group
           label.col-md-2.control-label(for="tags") Tag nearby facilities
           .col-md-10
-            input.form-control(ng-repeat='ct in crag.tags' name="tags", type="text", ng-model="ct.text")
+            form
+              tags-input(name="tags" ng-repeat='ct in crag.tags' ng-model="ct.text" add-on-blur="false" min-tags="1" max-tags="5" allow-leftover-text="false")
         .form-group
           .col-md-10.col-md-offset-2
             .pull-right

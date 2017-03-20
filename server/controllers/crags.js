@@ -38,7 +38,7 @@ exports.createCrag = function(req, res) {
   //create an array of tags to save
   for(var i=0;i<tagLength;i++){
          tg[i] = req.body.tags[i];
-         newTags.push({text: tg[i]});
+         newTags.push(tg[i]);
   }
   console.log('tags',JSON.stringify(newTags));
   //populate Crag Schema to save to db

@@ -31,7 +31,9 @@
         <div class="form-group">
           <label for="tags" class="col-md-2 control-label">Tag nearby facilities</label>
           <div class="col-md-10">
-            <input ng-repeat="ct in crag.tags" name="tags" type="text" ng-model="ct.text" class="form-control"/>
+            <form>
+              <tags-input name="tags" ng-repeat="ct in crag.tags" ng-model="ct.text" add-on-blur="false" min-tags="1" max-tags="5" allow-leftover-text="false"></tags-input>
+            </form>
           </div>
         </div>
         <div class="form-group">
