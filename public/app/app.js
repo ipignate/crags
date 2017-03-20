@@ -39,7 +39,8 @@
             })
             .when('/manage',{
               templateUrl: '/partials/crags/manage',
-              controller: 'manageCtrl'
+              controller: 'manageCtrl',
+              resolve: routeRoleChecks.user
             })
             .when('/add',{
               templateUrl: '/partials/crags/add', 

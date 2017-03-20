@@ -40,7 +40,6 @@ exports.createCrag = function(req, res) {
          tg[i] = req.body.tags[i];
          newTags.push(tg[i]);
   }
-  console.log('tags',JSON.stringify(newTags));
   //populate Crag Schema to save to db
   var newCrag = {
     name: req.body.name,
@@ -50,7 +49,6 @@ exports.createCrag = function(req, res) {
     tags: newTags
   }
 
-  console.log('newCrag',JSON.stringify(newCrag));
   var crag=new Crag(newCrag);
   crag.save(function(err){
     if(err) res.send(err);
