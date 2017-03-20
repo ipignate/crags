@@ -15,7 +15,7 @@
         </thead>
         <tbody ng-repeat="crag in $parent.crags">
           <tr>
-            <td>{{crag.name}}<br/><span ng-repeat="ct in $parent.crag.tags" class="badge">{{ct.tag}}</span></td>
+            <td>{{crag.name}}<br/><span ng-repeat="ct in $parent.crag.tags" class="badge">{{ct.text}}</span></td>
             <td>{{crag.region}}</td>
             <td>{{crag.grade}}</td>
           </tr>
