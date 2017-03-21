@@ -1,8 +1,7 @@
 (function(){
     var mainCtrl = function($scope, $http, Geo){
       //Variable definition
-      var formData = {},
-          mks = {},
+      var mks = {},
           queryBody = {},
           queryResults = {},
           queryCount = 0;
